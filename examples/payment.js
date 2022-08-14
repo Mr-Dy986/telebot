@@ -1,11 +1,11 @@
 const TeleBot = require('../');
-const bot = new TeleBot('TELEGRAM_BOT_TOKEN');
+const bot = new TeleBot('5522235076:AAFxi7uTija6AqcbzcqvYwCCXMdiQnJt-TU');
 
 bot.on('/start', (msg) => {
 
     const inlineKeyboard = bot.inlineKeyboard([
         [
-            bot.inlineButton('Take all my money!', {pay: true})
+            bot.inlineButton('Take all my money!', { pay: true })
         ]
     ]);
 
@@ -17,9 +17,9 @@ bot.on('/start', (msg) => {
         startParameter: 'pay',
         currency: 'EUR',
         prices: [
-            {label: 'Tea', amount: 125},
-            {label: 'For testing!', amount: 1250},
-            {label: 'Discount', amount: -120}
+            { label: 'Tea', amount: 125 },
+            { label: 'For testing!', amount: 1250 },
+            { label: 'Discount', amount: -120 }
         ],
         replyMarkup: inlineKeyboard
     }).then(data => {
